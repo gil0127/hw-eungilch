@@ -1,0 +1,45 @@
+/**
+
+Problem 1 
+
+Part a - 1, 4, 8
+
+Part b - 4
+
+Part c - 2
+
+Part d - 2
+
+
+Problem 2
+
+a - 3
+
+b - 
+	1)
+	Stage an untracked file to be committed. The (hypothetical) file is called 'hw1q2b.cpp'.
+
+	git add hw1q2b.cpp
+
+
+	2) Display the details of the last three commits in the repository.
+
+	git log -3
+
+c- Stores the current contents of the index in a new commit along with a log message
+    from the user describing the changes.
+
+Problem 6
+
+This storage manager is very problematic. Explain how it is possible to overwrite part of the buffer that the user still has a pointer to (and may try to access via that pointer).
+
+=> 
+char * ptr1 = alloc_chars(10);
+free_chars(ptr1);
+ptr1[5] = 'h';
+ptr1[6] = 'i';
+
+Once we perform one allocation, we gain access to the buffer array of length 10,000. With access and knowledge of the length of the buffer,
+  we can then manipulate and overwrite any part of the array that we use regardless of future allocations or if we free the memory or not.
+
+*/
